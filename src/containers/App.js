@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {connect} from 'react-redux'
 import {Counter} from '../components/count/index'
-import {Plus, Minus}  from '../action/countAction'
+import {Plus, Minus}  from '../actions/countAction'
 
 class App extends Component {
   render() {

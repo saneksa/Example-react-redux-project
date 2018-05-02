@@ -1,4 +1,4 @@
-import {PLUS , MINUS} from '../action/countAction';
+import {PLUS , MINUS} from '../actions/actionTypes';
 
 const initialState = {count:0};
 
