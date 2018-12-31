@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
+import { ConnectedRouter } from 'connected-react-router';
 import './index.css';
 import { render } from 'react-dom';
 import { getStore, history } from './store';
@@ -13,7 +13,11 @@ const store = getStore();
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route path="/" component={App} />
+      <div>
+        <Switch>
+          <Route path="/" component={App} />
+        </Switch>
+      </div>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')

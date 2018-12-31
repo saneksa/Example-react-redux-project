@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import './App.css';
 import Counter from '../components/Count/Count';
@@ -5,7 +6,13 @@ import { Plus, Minus } from '../store/CountStore/action';
 import ConnectComponents from '../decoraters/ConnectComponents';
 import getCount from '../store/CountStore/selectors';
 
-class App extends React.Component {
+interface IAppProps {
+  count: string;
+  countPlus: (value: number) => void;
+  countMinus: (value: number) => void;
+}
+
+class App extends React.Component<IAppProps> {
   static mapStateToProps(state) {
     return {
       count: getCount(state)

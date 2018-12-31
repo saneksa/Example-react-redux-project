@@ -2,18 +2,18 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise';
-import { routerReducer, routerMiddleware } from 'react-router-redux';
 import logger from 'redux-logger';
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
 import countReducer from './store/CountStore/reducer';
 
-export const history = createHistory();
+export const history = createBrowserHistory();
 
 const enhancer = composeWithDevTools(
   applyMiddleware(routerMiddleware(history), promise, thunk, logger)
 );
 const rootReducer = combineReducers({
-  routerReducer,
+  router: connectRouter(history),
   countReducer
 });
 
