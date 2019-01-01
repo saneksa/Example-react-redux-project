@@ -19,7 +19,8 @@
     "no-console": 1,
     "no-unexpected-multiline": "warn",
     "react/jsx-uses-react": 1,
-    "import/no-unresolved": 0
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   },
   "settings": {
     "react": {
