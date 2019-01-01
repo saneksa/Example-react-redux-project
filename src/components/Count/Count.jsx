@@ -8,7 +8,7 @@ import { Add, Remove } from '@material-ui/icons';
 import { containerStyle, buttonStyle } from './Count.style';
 
 export interface ICounterProps {
-  data: string;
+  data: number;
   increment: (value: number) => void;
   decrement: (value: number) => void;
 }

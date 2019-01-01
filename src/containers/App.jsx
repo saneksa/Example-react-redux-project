@@ -7,7 +7,7 @@ import ConnectComponents from '../decoraters/ConnectComponents';
 import getCount from '../store/CountStore/selectors';
 
 interface IAppProps {
-  count: string;
+  count: number;
   countPlus: (value: number) => void;
   countMinus: (value: number) => void;
 }
