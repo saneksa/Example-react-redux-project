@@ -11,6 +11,7 @@
     "glamor": "^2.20.40",
     "history": "^4.7.2",
     "prop-types": "^15.6.2",
+    "prop-types-extra": "^1.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
@@ -36,6 +37,7 @@
   ],
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-plugin-react-flow-props-to-prop-types": "^0.15.0",
     "eslint": "^5.11.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",

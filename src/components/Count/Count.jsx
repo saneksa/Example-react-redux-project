@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react';
 import './Count.css';
-import propTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
 import { Add, Remove } from '@material-ui/icons';
@@ -14,12 +13,6 @@ export interface ICounterProps {
 }
 
 class Counter extends React.PureComponent<ICounterProps> {
-  static propTypes = {
-    increment: propTypes.func,
-    decrement: propTypes.func,
-    data: propTypes.number
-  };
-
   clickPlus = () => {
     this.props.increment(1);
   };
