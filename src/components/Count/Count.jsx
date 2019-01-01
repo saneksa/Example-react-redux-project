@@ -1,9 +1,9 @@
 // @flow
 import * as React from 'react';
-import './Count.css';
 import Button from '@material-ui/core/Button';
 import Input from '@material-ui/core/Input';
 import { Add, Remove } from '@material-ui/icons';
+import { withRouter } from 'react-router-dom';
 import { containerStyle, buttonStyle } from './Count.style';
 
 export interface ICounterProps {
@@ -23,7 +23,7 @@ class Counter extends React.PureComponent<ICounterProps> {
 
   render() {
     return (
-      <div className={`${containerStyle({ display: 'flex' })}`}>
+      <div className={`${containerStyle({ display: 'block' })}`}>
         <div>
           <Input value={this.props.data} disabled={true} />
         </div>
@@ -43,4 +43,4 @@ class Counter extends React.PureComponent<ICounterProps> {
   }
 }
 
-export default Counter;
+export default withRouter(Counter);

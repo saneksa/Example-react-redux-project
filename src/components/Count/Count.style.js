@@ -5,5 +5,6 @@ export const containerStyle = props => css({
 });
 
 export const buttonStyle = props => css({
+  display: 'inline-block',
   margin: `${20}px`
 });

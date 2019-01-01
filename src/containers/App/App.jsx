@@ -1,10 +1,10 @@
 // @flow
 import React from 'react';
-import './App.css';
-import Counter from '../components/Count/Count';
-import { Plus, Minus } from '../store/CountStore/action';
-import ConnectComponents from '../decoraters/ConnectComponents';
-import getCount from '../store/CountStore/selectors';
+import Counter from '../../components/Count/Count';
+import { Plus, Minus } from '../../store/CountStore/action';
+import ConnectComponents from '../../decoraters/ConnectComponents';
+import getCount from '../../store/CountStore/selectors';
+import { appContainer } from './App.style';
 
 interface IAppProps {
   count: number;
@@ -33,7 +33,7 @@ class App extends React.Component<IAppProps> {
 
   render() {
     return (
-      <div className="App">
+      <div className={appContainer}>
         <Counter
           data={this.props.count}
           increment={this.props.countPlus}
